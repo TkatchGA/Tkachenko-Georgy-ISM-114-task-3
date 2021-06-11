@@ -12,24 +12,6 @@ class human
   protected :
 
     /**
-     * @brief имя
-     * 
-     */
-    std::string _name;
-
-    /**
-     * @brief возраст
-     * 
-     */
-    int _age;
-
-    /**
-     * @brief вес
-     * 
-     */
-    int _weight;
-
-    /**
      * @brief гендер
      * 
      */

@@ -7,23 +7,23 @@
 human::human(const std::string name, const int age, const int weight, const bool gender)
     : name(name), age(age), weight(weight), gender(gender) {}
 
-double human::get_name() const {
+std::string human::get_name() const {
     return this->name;
 }
 
-double human::get_age() const {
+int human::get_age() const {
     return this->age;
 }
-double human::get_name() const {
+int human::get_weight() const {
     return this->weight;
 }
-double human::get_gender() const {
+bool human::get_gender() const {
     return this->gender;
 }
 
 void SetName(const std::string name)
 {
-    _name = this->name;
+    return this->name;
 }
 
 void SetAge(const int age)
@@ -31,7 +31,7 @@ void SetAge(const int age)
     if (age <= 0) {
         throw;
     }
-    _age = this->age;
+    return this->age;
 }
 
 void Setweight(const int weight)
@@ -39,12 +39,12 @@ void Setweight(const int weight)
     if (weight <= 0) {
         throw;
     }
-    _weight = this->weight;
+    return this->weight;
 }
 
 void SetGender(const bool this->gender)
 {
-    if (gender == true) {
+    if (this->gender == true) {
         _gender = "Мужчина";
     } else {
         _gender = "Женщина";
@@ -56,7 +56,7 @@ void SetGender(const bool this->gender)
 student(const int year, const std::string name, const int age, const int weight, const bool gender) : base(year, name, age, weight, gender)
     : year(year);
 
-double student::get_gender() const {
+int student::get_gender() const {
     return this->year;
 }
 
@@ -65,26 +65,26 @@ void SetYear(const int year)
     if (year < CURRENT_YEAR) {
         throw;
     }
-    _year = this->year;
+    return this->year;
 }
 
 void AddYear(const int addValue)
 {
-    _year += addValue;
+    this->year += addValue;
 }
 
 void AddYear()
 {
-    _year++;
+    this->year++;
 }
 
 std::string student::ToString() const;
 {
   std::stringstream buffer;
-  buffer << "{" << _name << ", ";
-  buffer << _age << ", ";
-  buffer << _weight << ", ";
-  buffer << _gender << ", ";
+  buffer << "{" << this->name << ", ";
+  buffer << this->age << ", ";
+  buffer << this->weight << ", ";
+  buffer << this->gender << ", ";
   buffer << _year << "}";
 
   return buffer.str();
