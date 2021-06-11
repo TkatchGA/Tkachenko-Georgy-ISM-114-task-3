@@ -58,7 +58,7 @@ class human
      * @param gender 
      */
 
-    human(const std::string name, const int age, const int weight, const bool gender);
+    human::human(const std::string name, const int age, const int weight, const bool gender);
     /**
      * @brief Set the Name object
      * 
@@ -107,6 +107,8 @@ class human
 
         int _year;
 
+        static constexpr CURRENT_YEAR = 2021;
+
     public :
 
     /**
@@ -130,7 +132,7 @@ class human
      * @param gender 
      */
 
-    student(const int year, const std::string name, const int age, const int weight, const bool gender) 
+    student::student(const int year, const std::string name, const int age, const int weight, const bool gender) 
         : base(year, name, age, weight, gender);
 
     /**
