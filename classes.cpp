@@ -4,33 +4,37 @@
 #include "classes.h"
 
 
-human(std::string name, int age, int weight, bool gender)
+human(const std::string name, const int age, const int weight, const bool gender)
 {
     _name = name;
     _age = age;
     _weight = weight;
 }
 
-void SetName(std::string name)
+void SetName(const std::string name)
 {
     _name = name;
 }
 
-void SetAge(int age)
+void SetAge(const int age)
 {
-    if (age > 0) {
+    if (age <= 0) {
+        throw;
+    } else {
         _age = age;
     }
 }
 
-void Setweight(int weight)
+void Setweight(const int weight)
 {
-    if (weight > 0) {
+    if (weight < 0) {
+        throw;
+    } else {
         _weight = weight;
     }
 }
 
-void SetGender(bool gender)
+void SetGender(const bool gender)
 {
     if (gender == true) {
         _gender = "Мужчина";
@@ -41,19 +45,19 @@ void SetGender(bool gender)
 
 };
 
-student(int year, std::string name, int age, int weight, bool gender) : base(year, name, age, weight, gender)
+student(const int year, const std::string name, const int age, const int weight, const bool gender) : base(year, name, age, weight, gender)
 {
     _year = year;
 }
 
-void SetYear(int year)
+void SetYear(const int year)
 {
     if (year > 2021) {
         _year = year;
     }
 }
 
-void AddYear(int addValue)
+void AddYear(const int addValue)
 {
     _year += addValue;
 }

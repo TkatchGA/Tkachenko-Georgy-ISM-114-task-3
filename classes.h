@@ -58,20 +58,20 @@ class human
      * @param gender 
      */
 
-    human(std::string name, int age, int weight, bool gender);
+    human(const std::string name, const int age, const int weight, const bool gender);
     /**
      * @brief Set the Name object
      * 
      * @param name 
      */
-    void SetName(std::string name);
+    void SetName(const std::string name);
 
     /**
      * @brief Set the Age object
      * 
      * @param age 
      */
-    void SetAge(int age);
+    void SetAge(const int age);
 
     /**
      * @brief 
@@ -79,7 +79,7 @@ class human
      * @param weight 
      */
 
-    void Setweight(int weight);
+    void Setweight(const int weight);
 
     /**
      * @brief Set the Gender object
@@ -87,7 +87,7 @@ class human
      * @param gender 
      */
 
-    void SetGender(bool gender);
+    void SetGender(const bool gender);
 
 };
 
@@ -130,7 +130,7 @@ class human
      * @param gender 
      */
 
-    student(int year, std::string name, int age, int weight, bool gender) 
+    student(const int year, const std::string name, const int age, const int weight, const bool gender) 
         : base(year, name, age, weight, gender);
 
     /**
@@ -139,7 +139,7 @@ class human
      * @param year 
      */
 
-    void SetYear(int year);
+    void SetYear(const int year);
 
     /**
      * @brief Изменение года
@@ -147,7 +147,7 @@ class human
      * @param addValue 
      */
 
-    void AddYear(int addValue);
+    void AddYear(const int addValue);
 
     /**
      * @brief Увелечение года
