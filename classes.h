@@ -58,7 +58,7 @@ class human
      * @param gender 
      */
 
-    human(std::string name, int age, int weight, std::string gender);
+    human(std::string name, int age, int weight, bool gender);
     /**
      * @brief Set the Name object
      * 
@@ -80,6 +80,14 @@ class human
      */
 
     void Setweight(int weight);
+
+    /**
+     * @brief Set the Gender object
+     * 
+     * @param gender 
+     */
+
+    void SetGender(bool gender);
 
 };
 
@@ -122,7 +130,7 @@ class human
      * @param gender 
      */
 
-    student(int year, std::string name, int age, int weight, std::string gender) 
+    student(int year, std::string name, int age, int weight, bool gender) 
         : base(year, name, age, weight, gender);
 
     /**

@@ -4,12 +4,11 @@
 #include "classes.h"
 
 
-human(std::string name, int age, int weight, std::string gender)
+human(std::string name, int age, int weight, bool gender)
 {
     _name = name;
     _age = age;
     _weight = weight;
-    _gender = gender;
 }
 
 void SetName(std::string name)
@@ -19,24 +18,39 @@ void SetName(std::string name)
 
 void SetAge(int age)
 {
-    _age = age;
+    if (age > 0) {
+        _age = age;
+    }
 }
 
 void Setweight(int weight)
 {
-    _weight = weight;
+    if (weight > 0) {
+        _weight = weight;
+    }
+}
+
+void SetGender(bool gender)
+{
+    if (gender == true) {
+        _gender = "Мужчина";
+    } else {
+        _gender = "Женщина";
+    }
 }
 
 };
 
-student(int year, std::string name, int age, int weight, std::string gender) : base(year, name, age, weight, gender)
+student(int year, std::string name, int age, int weight, bool gender) : base(year, name, age, weight, gender)
 {
     _year = year;
 }
 
 void SetYear(int year)
 {
-    _year = year;
+    if (year > 2021) {
+        _year = year;
+    }
 }
 
 void AddYear(int addValue)
