@@ -1,12 +1,11 @@
 #include <iostream>
-#include "student.h"
-#include "man.h"
+#include "classes.h"
 
 int main() {
 
-    man man_test = man("Гоша", 19, "Муж", 64);
-    
 
-    std::cout << std::endl;
+    student test = student(2002, "Gosha", 19, 183 , "man");
+    console.WriteLine(test);
+
     return 0;
 }
